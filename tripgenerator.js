@@ -27,8 +27,26 @@ function newRandomGet(destinationsArray, resturantsArray, transportationArray, e
     let dayTrip = [];
     
     dayTrip.push(destination, resturant, transport, entertainment);
+
+    console.log(dayTrip);
     
     alert(dayTrip);
 }
 
 newRandomGet(destinations, resturants, transportation, entertainmentIdeas);
+
+let userInput = prompt("Are you satisfied with your day trip?")
+
+while (userInput != "yes"){
+    switch(userInput){
+        case "no":
+            newRandomGet(destinations, resturants, transportation, entertainmentIdeas);
+            userInput = prompt("Are you satisfied with your day trip??");
+            break;
+        default:
+            alert("Uhm... something went wrong please try again.");
+            break;
+    }
+}
+
+console.log("Yay! You planned your day trip!");
