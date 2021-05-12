@@ -14,18 +14,21 @@ function getRandomElement(array){
     return element;
 }
 
-let destination = getRandomElement(destinations);
+function newRandomGet(destinationsArray, resturantsArray, transportationArray, entertainmentIdeasArray){
+    
+    let destination = getRandomElement(destinationsArray);
+    
+    let resturant = getRandomElement(resturantsArray);
+    
+    let transport = getRandomElement(transportationArray);
+    
+    let entertainment = getRandomElement(entertainmentIdeasArray);
+    
+    let dayTrip = [];
+    
+    dayTrip.push(destination, resturant, transport, entertainment);
+    
+    alert(dayTrip);
+}
 
-let resturant = getRandomElement(resturants);
-
-let transport = getRandomElement(transportation);
-
-let entertainment = getRandomElement(entertainmentIdeas);
-
-let dayTrip = [];
-
-dayTrip.push(destination, resturant, transport, entertainment);
-
-alert(dayTrip);
-
-
+newRandomGet(destinations, resturants, transportation, entertainmentIdeas);
